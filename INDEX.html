@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casino Millions</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #3a0066, #000);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ✨ PARTÍCULAS */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    opacity: 0.2;
+    animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+    from {background-position: 0 0;}
+    to {background-position: 1000px 1000px;}
+}
+
+/* 🔥 HEADER */
+header {
+    padding: 30px 10px;
+}
+
+/* 💎 LOGO PRO (sin fondo feo) */
+.logo {
+    width: 180px;
+    display: block;
+    margin: auto;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 15px gold);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {filter: drop-shadow(0 0 5px gold);}
+    to {filter: drop-shadow(0 0 20px gold);}
+}
+
+h1 {
+    color: gold;
+    margin: 15px 0;
+    font-size: 34px;
+}
+
+/* 🎯 BOTONES */
+.botones {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    margin: 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 0 15px #25D366;
+}
+
+.btn-casino {
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    box-shadow: 0 0 15px gold;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+/* 🃏 CARDS */
+section {
+    padding: 40px 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid gold;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* 🪄 POPUP */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #111;
+    border: 1px solid gold;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 0 20px gold;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: gold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- 💎 LOGO -->
+    <img src="C:\Users\PCK1\Desktop\Nueva carpeta\Nueva carpeta\mill.png" class="logo">
+
+    <h1>¡Jugá y Ganá en Grande!</h1>
+
+    <div class="botones">
+
+        <!-- 💬 WHATSAPP -->
+        <a href="https://wa.link/TULINK" target="_blank" class="btn btn-whatsapp">
+            💬 WhatsApp
+        </a>
+
+        <!-- 🎰 PLATAFORMA -->
+        <a href="https://TUWEBCHAT.com" target="_blank" class="btn btn-casino">
+            🎰 Jugar Ahora
+        </a>
+
+    </div>
+
+</header>
+
+<section>
+    <h2>🔥 Beneficios</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🎁 Bonos</h3>
+            <p>Promos exclusivas todos los días</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Retiros</h3>
+            <p>Cobros rápidos y seguros</p>
+        </div>
+
+        <div class="card">
+            <h3>🎰 Juegos</h3>
+            <p>Slots, ruleta y más</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>💎 Estamos activos 24/7</h2>
+
+    <a href="https://TUWEBCHAT.com" target="_blank" class="btn btn-casino">
+        QUIERO JUGAR
+    </a>
+</section>
+
+<footer>
+    © 2026 Casino Millions
+</footer>
+
+<!-- 🪄 POPUP AUTOMÁTICO -->
+<div class="popup" id="popup">
+    🎁 ¡Escribinos y obtené un bono!
+    <br>
+    <button onclick="irWhatsApp()">Ir a WhatsApp</button>
+</div>
+
+<script>
+setTimeout(() => {
+    document.getElementById("popup").style.display = "block";
+}, 4000);
+
+function irWhatsApp() {
+    window.open("https://wa.link/TULINK", "_blank");
+}
+</script>
+
+</body>
+</html>
