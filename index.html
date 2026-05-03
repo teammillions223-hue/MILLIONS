@@ -57,9 +57,9 @@ h1 {
     font-size: 34px;
 }
 
-/* 🎯 BOTONES */
-.botones {
-    margin-top: 20px;
+/* 🎯 BOTÓN CENTRAL */
+.boton-central {
+    margin-top: 25px;
 }
 
 .btn {
@@ -70,15 +70,6 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-}
-
-.btn-whatsapp {
-    background: #25D366;
-    color: white;
-    box-shadow: 0 0 15px #25D366;
-}
-
-.btn-casino {
     background: linear-gradient(45deg, gold, orange);
     color: black;
     box-shadow: 0 0 15px gold;
@@ -120,11 +111,11 @@ section {
     bottom: 20px;
     right: 20px;
     background: #111;
-    border: 1px solid gold;
+    border: 1px solid #25D366;
     border-radius: 15px;
     padding: 20px;
     display: none;
-    box-shadow: 0 0 20px gold;
+    box-shadow: 0 0 20px #25D366;
 }
 
 .popup button {
@@ -132,7 +123,8 @@ section {
     padding: 10px 15px;
     border: none;
     border-radius: 8px;
-    background: gold;
+    background: #25D366;
+    color: white;
     cursor: pointer;
 }
 
@@ -153,18 +145,11 @@ footer {
 
     <h1>¡Jugá y Ganá en Grande!</h1>
 
-    <div class="botones">
-
-        <!-- 💬 WHATSAPP -->
-        <a href="https://wa.link/TULINK" target="_blank" class="btn btn-whatsapp">
-            💬 WhatsApp
-        </a>
-
-        <!-- 🎰 PLATAFORMA -->
-        <a href="https://TUWEBCHAT.com" target="_blank" class="btn btn-casino">
+    <!-- 🎰 BOTÓN ÚNICO -->
+    <div class="boton-central">
+        <a href="https://greenbet.uno/" target="_blank" class="btn">
             🎰 Jugar Ahora
         </a>
-
     </div>
 
 </header>
@@ -198,11 +183,13 @@ footer {
     © 2026 Casino Millions
 </footer>
 
-<!-- 🪄 POPUP AUTOMÁTICO -->
+<!-- 🪄 POPUP WHATSAPP -->
 <div class="popup" id="popup">
-    🎁 ¡Escribinos y obtené un bono!
+    💬 ¿Necesitás ayuda?
     <br>
-    <button onclick="irWhatsApp()">Ir a WhatsApp</button>
+    Escribinos por WhatsApp
+    <br>
+    <button onclick="irWhatsApp()">Abrir WhatsApp</button>
 </div>
 
 <script>
@@ -211,7 +198,17 @@ setTimeout(() => {
 }, 4000);
 
 function irWhatsApp() {
-    window.open("https://wa.link/TULINK", "_blank");
+    const numeros = [
+        "595993335126",
+        "595993311956",
+        "595993600399"
+    ];
+
+    const elegido = numeros[Math.floor(Math.random() * numeros.length)];
+
+    const mensaje = "Hola quiero info del casino";
+
+    window.open(`https://wa.me/${elegido}?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 </script>
 
