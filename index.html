@@ -184,36 +184,3 @@ footer {
 </footer>
 
 <!-- 🪄 POPUP WHATSAPP -->
-<div class="popup" id="popup">
-    💬 ¿Necesitás ayuda?
-    <br>
-    Escribinos por WhatsApp
-    <br>
-    <button onclick="irWhatsApp()">Abrir WhatsApp</button>
-</div>
-
-<script>
-setTimeout(() => {
-    document.getElementById("popup").style.display = "block";
-}, 4000);
-
-function irWhatsApp() {
-    const numeros = [
-        "595993335126",
-        "595993311956",
-        "595993600399",
-        "595993511890",
-        "595993600557",
-        "595993426830",
-    ];
-
-    const elegido = numeros[Math.floor(Math.random() * numeros.length)];
-
-    const mensaje = "Hola quiero más info";
-
-    window.open(`https://wa.me/${elegido}?text=${encodeURIComponent(mensaje)}`, "_blank");
-}
-</script>
-
-</body>
-</html>
